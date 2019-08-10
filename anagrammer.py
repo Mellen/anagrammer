@@ -3,7 +3,7 @@ import argparse
 
 parser = argparse.ArgumentParser(description='makes anagrams from letters')
 parser.add_argument('letters', nargs=1, metavar='letters', help='The letters to anagram.')
-parser.add_argument('--use-all', help='Whether the anagram have to use all the letters', action='store_true')
+parser.add_argument('--use-all', help='Whether the anagrams have to use all the letters', action='store_true')
 
 args = parser.parse_args()
 
