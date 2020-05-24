@@ -21389,6 +21389,7 @@ gauche
 gaucheness
 gaucherie
 gaud
+gaudies
 gaudiest
 gaudily
 gaudiness
@@ -23730,6 +23731,8 @@ hefted
 heftier
 hefting
 hefty
+heftier
+heftiest
 hegemonic
 hegemony
 heifer
@@ -46302,6 +46305,8 @@ sights
 sightsee
 sightseeing
 sightseers
+sigil
+sigils
 sigma
 sigmoid
 sign
