@@ -2,9 +2,9 @@
 import argparse
 import re
 
-parser = argparse.ArgumentParser(description='makes values from numbers')
+parser = argparse.ArgumentParser(description='Used to solve the number game in (UK) Channel 4\'s Countdown')
 parser.add_argument('numbers', type=int, nargs=6, help='the numbers to use')
-parser.add_argument('target', type=int, nargs='?', help='the value to aim for, less than 1000, greater than 0')
+parser.add_argument('target', type=int, nargs='?', help='the value to aim for, less than 1000, greater than 99')
 
 def numbergram(numbers, target):
     operators = ['+', '-', '*', '/']
