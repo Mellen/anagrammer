@@ -13,12 +13,13 @@ def numbergram(numbers, target):
         calcs = extractCalcNumber(num, sums[num])
         for calc in calcs:
             value = parse(calc)
+            realcalc = addInBrackets(calc)
             if args.target != None:
                 if value == target:
-                    print(calc, '=', value)
+                    print(realcalc, '=', value)
                     found = True
             else:
-                print(calc, '=', value)
+                print(realcalc, '=', value)
 
     if not found:
         print('no solution found')
@@ -64,7 +65,15 @@ def parse(calc):
         elif ops[i] == '/':
             result = result / number
     return result
-        
+
+def addInBrackets(calc):
+    numbers = re.split('[+-/*]',calc)
+    ops = list(filter(lambda op: op != '', re.split('\d+',calc)))
+    realcalc = '((((('+numbers[0]
+    for i, number in enumerate(numbers[1:]):
+        realcalc += ops[i] + number + ')'
+    return realcalc
+
 if __name__ == '__main__':
     args = parser.parse_args()
     numbergram(args.numbers, args.target)
